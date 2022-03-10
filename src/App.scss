@@ -1,9 +1,21 @@
-// @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
-// * {
-//     font-family: "Open Sans", sans-serif;
-// }
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
 /* GLOBAL */
+h4 {
+    font-family: "Raleway", sans-serif;
+    line-height: 21.6px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.visi li,
+p {
+    font-family: "Open Sans", sans-serif;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+}
 
 li,
 a {

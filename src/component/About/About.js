@@ -16,7 +16,7 @@ const About = () => {
     return (
         <section className="about  " id="about">
             <div className="jumbotron ">
-                <div className="container pb-5 card">
+                <div className="container pb-5  ">
                     <div className="row d-flex justify-content-center align-items-center text-dark">
                         <div className="col-md-5 col-lg-5 col-xl-5 mx-auto mt-5 ">
                             <div
@@ -32,14 +32,11 @@ const About = () => {
                                 ></img>
                             </div>
                         </div>
-                        <div
-                            className="col-md-5 col-lg-5 col-xl-5 mx-auto mt-6 pt-5 "
-                            data-aos="fade-up-top"
-                        >
-                            <h4 className="text-dark text-uppercase mb-4 fw-bold text-left">
+                        <div className="col-md-5 col-lg-5 col-xl-5 mx-auto mt-6 pt-5 ">
+                            <h4 className=" mb-3 fw-bold text-left animate__animated animate__fadeInDown">
                                 Tentang Kami
                             </h4>
-                            <p>
+                            <p className="mb-4 animate__animated animate__fadeInUp">
                                 Taman Baca Masyarakat (TBM) Manggala pustaka
                                 merupakan satu² nya Taman baca yang ada di desa
                                 Simo, Tepatnya di dukuh Manggal Rt 17/rw 06.
@@ -58,15 +55,17 @@ const About = () => {
                                 meningkatkan perekonomian dan pemberdayaan
                                 masyarakat
                             </p>
-                            <a
-                                className="btn btn-primary"
-                                href={proposal}
-                                type="submit"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Proposal
-                            </a>
+                            <button className=" mx-1 button2 ">
+                                <a
+                                    className="text-light "
+                                    href={proposal}
+                                    type="submit"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    Proposal
+                                </a>
+                            </button>
                         </div>
                     </div>
                 </div>

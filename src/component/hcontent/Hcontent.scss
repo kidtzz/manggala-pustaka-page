@@ -52,6 +52,9 @@
     background-color: rgba(63, 73, 83, 0.8);
     overflow: hidden;
     position: relative;
+    a {
+        font-size: 17px;
+    }
 }
 #introCarousel .carousel,
 #introCarousel .carousel-inner,
@@ -156,26 +159,14 @@
 }
 #introCarousel .carousel-indicators li.active {
     opacity: 1;
-    background: #d9232d;
+    background: rgb(0, 113, 168);
+    background: linear-gradient(
+        94deg,
+        rgba(0, 113, 168, 1) 0%,
+        rgba(7, 142, 170, 1) 49%,
+        rgba(14, 167, 171, 1) 100%
+    );
 }
-// #hero .btn-get-started {
-//     font-family: "Raleway", sans-serif;
-//     font-weight: 500;
-//     font-size: 14px;
-//     letter-spacing: 1px;
-//     display: inline-block;
-//     padding: 14px 32px;
-//     border-radius: 4px;
-//     transition: 0.5s;
-//     line-height: 1;
-//     color: #fff;
-//     -webkit-animation-delay: 0.8s;
-//     animation-delay: 0.8s;
-//     background: #d9232d;
-// }
-// #hero .btn-get-started:hover {
-//     background: #df3740;
-// }
 
 @media (max-width: 992px) {
     #introCarousel {

@@ -39,25 +39,26 @@ const Hcontent = () => {
                                 <h3 className="mb-3 animate__animated animate__fadeInDown">
                                     Hallo, <span className="auto-input"> </span>
                                 </h3>
-                                <h1 className="mb-3 display-4 font-weight-bold animate__animated animate__fadeInUp">
+                                <h2 className="mb-3 display-4 font-weight-bold animate__animated animate__fadeInUp">
                                     Manggala Pustaka
-                                </h1>
+                                </h2>
                                 <h5 className="mb-4 animate__animated animate__fadeInUp scrollto">
                                     Madya, Mangun, Karso
                                 </h5>
                                 <a
-                                    className="btn btn-outline-light  btn-lg m-2 animate__animated animate__fadeInDown"
+                                    className="btn px-3 btn-outline-light btn-sm py-2   animate__animated animate__fadeInDown"
                                     href="mailto:manggalapustaka@gmail.com"
                                     rel="follow"
                                 >
                                     Kontak Kami
                                 </a>
                                 <a
-                                    className="p-2 px-4 mx-3 button2 animate__animated animate__fadeInDown scrollto"
+                                    className="p-2 px-4 mx-3 button2 animate__animated animate__fadeInDown"
                                     href={proposal}
                                     target="_blank"
                                     role="button"
                                     rel="noreferrer"
+                                    data-aos="flip-down"
                                 >
                                     Proposal
                                 </a>
@@ -87,13 +88,15 @@ const Hcontent = () => {
                                     Manggala Pustaka memiliki berbagai kegiatan
                                     menarik
                                 </h2>
-                                <a
-                                    className="btn btn-primary btn-lg m-2 animate__animated animate__fadeInUp"
-                                    href="#kegiatan"
-                                    role="button"
-                                >
-                                    Read More
-                                </a>
+                                <button className="  button2 animate__animated animate__fadeInUp ">
+                                    <a
+                                        href="#kegiatan"
+                                        role="button"
+                                        className="text-light  "
+                                    >
+                                        Read More
+                                    </a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -112,13 +115,15 @@ const Hcontent = () => {
                                         "IYOIN LC SOLO"
                                     </u>
                                 </h2>
-                                <a
-                                    className="btn btn-primary btn-lg m-2 animate__animated animate__fadeInUp"
-                                    href="#kegiatan"
-                                    role="button"
-                                >
-                                    Read More
-                                </a>
+                                <button className=" button2 animate__animated animate__fadeInUp ">
+                                    <a
+                                        href="#kegiatan"
+                                        role="button"
+                                        className="text-light"
+                                    >
+                                        Read More
+                                    </a>
+                                </button>
                             </div>
                         </div>
                     </div>
