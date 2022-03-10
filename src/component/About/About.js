@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./About.css";
+import "./About.scss";
 import profil from "../../img/profil.jpeg";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -21,7 +21,7 @@ const About = () => {
                         <div className="col-md-5 col-lg-5 col-xl-5 mx-auto mt-5 ">
                             <div
                                 className="img-fluid"
-                                data-aos="fade-right"
+                                data-aos="fade-bottom"
                                 data-aos-offset="300"
                                 data-aos-easing="ease-in-sine"
                             >
@@ -34,7 +34,7 @@ const About = () => {
                         </div>
                         <div
                             className="col-md-5 col-lg-5 col-xl-5 mx-auto mt-6 pt-5 "
-                            data-aos="fade-up-left"
+                            data-aos="fade-up-top"
                         >
                             <h4 className="text-dark text-uppercase mb-4 fw-bold text-left">
                                 Tentang Kami

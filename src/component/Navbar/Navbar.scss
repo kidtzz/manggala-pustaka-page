@@ -1,17 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 a {
     text-decoration: none;
     color: black;
 }
 
+/* NAVBAR */
+
 .header-inner {
-    position: relative;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 99;
     background-color: #fff;
     list-style: none;
-    height: 75px;
 }
 
 .navbar-scroll {
@@ -32,27 +36,11 @@ a {
         margin-bottom: 20px;
     }
 }
-
-.logo {
-    position: absolute;
-    top: 0;
-}
-
-.nav-item .nav-link {
-    display: block;
-    text-transform: capitalize;
-    font-size: 16px;
-    font-weight: 500;
-    color: black;
-    transition: 0.15s;
-    -webkit-transition: 0.15s;
-    -moz-transition: 0.15s;
-    -ms-transition: 0.15s;
-    -o-transition: 0.15s;
-}
-
-.navbar-scroll .nav-item .nav-link {
-    color: black;
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 // DROPDOWN
@@ -138,61 +126,93 @@ a {
         justify-self: center;
     }
 }
-//Desktop
-@media only screen and (min-width: 993px) {
-    .nav-item > .nav-link {
-        padding: 5px 20px !important;
-        display: block !important;
+
+@media (min-width: 992px) {
+    .navbar {
+        height: 70px !important;
+        .nav-item > .nav-link {
+            padding: 5px 20px !important;
+            display: block !important;
+        }
+
+        .nav-link {
+            margin-bottom: -23px;
+            color: #666666;
+        }
+
+        .nav-link::after {
+            content: "";
+            display: block;
+            width: 0px;
+            height: 2px;
+            margin-top: 23px;
+            background: rgb(3, 169, 244);
+            background: linear-gradient(
+                142deg,
+                rgba(3, 169, 244, 1) 0%,
+                rgba(70, 140, 222, 1) 13%,
+                rgba(194, 86, 181, 1) 83%
+            );
+            transition: 0.3s;
+            -webkit-transition: 0.3s;
+            -moz-transition: 0.3s;
+            -ms-transition: 0.3s;
+            -o-transition: 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: black;
+        }
+        .navbar-nav .fw-bold {
+            margin-left: 12px;
+        }
     }
 
-    .nav-link {
-        margin-bottom: -21px;
-    }
-    .nav-link::after {
-        content: "";
-        display: block;
-        width: 0px;
-        height: 2.3px;
-        margin-top: 22px;
-        background: rgb(3, 169, 244);
-        background: linear-gradient(
-            142deg,
-            rgba(3, 169, 244, 1) 0%,
-            rgba(70, 140, 222, 1) 13%,
-            rgba(194, 86, 181, 1) 83%
-        );
-        transition: 0.4s;
-        -webkit-transition: 0.4s;
-        -moz-transition: 0.4s;
-        -ms-transition: 0.4s;
-        -o-transition: 0.4s;
-    }
-
-    .nav-link:hover::after {
-        width: 100%;
-    }
-
-    .navbar-nav .nav-link:hover {
-        color: black;
+    // DROPDOWN
+    .menu-items button {
+        margin-bottom: 4px;
     }
 }
+// For Mobile Phones
 
-// PHone tablet
-@media only screen and (max-width: 992px) {
-    .nav-item > .nav-link {
-        color: black !important;
+@media (max-width: 992px) {
+    #navbarNav .header-button {
+        margin: auto;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .navbar {
+        background-color: #fff;
+        .navbar-toggler:focus,
+        .navbar-toggler:active,
+        .navbar-toggler-icon:focus {
+            outline: none;
+            box-shadow: none;
+            border: none;
+        }
+        .dropdown.show {
+            display: block;
+            height: 100px;
+            .nav-link {
+                margin-left: 20px;
+                margin-bottom: -20px;
+                text-justify: center;
+            }
+        }
+        .menu-items button {
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
     }
     .header-inner {
-        background-color: #fff !important;
-    }
-    .content-banner .first-title {
-        font-size: 30px !important;
-    }
-
-    .navbar-nav {
-        align-items: center;
-    }
-    #about .container {
-        padding: 1rem 3rem;
+        height: 20px !important;
+        background: #fff !important;
+        .nav-link a:hover {
+            color: var(--yellow);
+        }
     }
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Kegiatan.css";
+import "./Kegiatan.scss";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import imgwarnai from "../../img/galery/12.jpg";

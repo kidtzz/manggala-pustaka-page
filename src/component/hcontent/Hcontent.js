@@ -1,15 +1,23 @@
-import React from "react";
-import "./Hcontent.css";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "./Hcontent.scss";
+import "../../assets/animate.css/animate.min.css";
 import proposal from "../../file/proposal.pdf";
 
 const Hcontent = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
     return (
         <div
             id="introCarousel"
             className="carousel slide carousel-fade shadow-2-strong"
             data-bs-ride="carousel"
+            data-bs-interval="5000"
+            class="carousel slide carousel-fade"
         >
-            {/* <!-- Indicators --> */}
             <ol className="carousel-indicators">
                 <li
                     data-bs-target="#introCarousel"
@@ -28,13 +36,15 @@ const Hcontent = () => {
                     <div className="mask">
                         <div className="d-flex justify-content-center h-100 align-items-center">
                             <div className="text-white text-center">
-                                <h3 className="mb-3 ">
+                                <h3 className="mb-3 animate__animated animate__fadeInDown">
                                     Hallo, <span className="auto-input"> </span>
                                 </h3>
-                                <h1 className="mb-3 display-4 font-weight-bold">
+                                <h1 className="mb-3 display-4 font-weight-bold animate__animated animate__fadeInUp">
                                     Manggala Pustaka
                                 </h1>
-                                <h5 className="mb-4">Madya, Mangun, Karso</h5>
+                                <h5 className="mb-4 animate__animated animate__fadeInUp scrollto">
+                                    Madya, Mangun, Karso
+                                </h5>
                                 <a
                                     className="btn btn-outline-light btn-lg m-2"
                                     href="mailto:manggalapustaka@gmail.com"
@@ -118,28 +128,27 @@ const Hcontent = () => {
 
           <!-- Controls --> */}
             <a
-                className="carousel-control-prev"
+                class="carousel-control-prev"
                 href="#introCarousel"
                 role="button"
                 data-bs-slide="prev"
             >
                 <span
-                    className="carousel-control-prev-icon"
+                    class="carousel-control-prev-icon bi bi-chevron-left"
                     aria-hidden="true"
                 ></span>
-                <span className="sr-only">Previous</span>
             </a>
+
             <a
-                className="carousel-control-next"
+                class="carousel-control-next"
                 href="#introCarousel"
                 role="button"
                 data-bs-slide="next"
             >
                 <span
-                    className="carousel-control-next-icon"
+                    class="carousel-control-next-icon bi bi-chevron-right"
                     aria-hidden="true"
                 ></span>
-                <span className="sr-only">Next</span>
             </a>
         </div>
     );
