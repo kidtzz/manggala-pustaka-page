@@ -42,6 +42,8 @@
         #ffeb3b,
         #03a9f4
     );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #introCarousel {
@@ -83,7 +85,7 @@
     color: #fff;
     margin-bottom: 20px;
     font-size: 48px;
-    font-weight: 700;
+    font-weight: 300;
 }
 #introCarousel p {
     -webkit-animation-delay: 0.4s;

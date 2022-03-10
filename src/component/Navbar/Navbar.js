@@ -2,7 +2,6 @@ import React from "react";
 import "./Navbar.scss";
 import logo from "../../img/logo1.png";
 import { MenuItems, ListMenu } from "./MenuItems";
-import { button2 } from "../button/Button";
 
 const Navbar = () => {
     return (
@@ -48,9 +47,11 @@ const Navbar = () => {
                         </ul>
 
                         <li className="nav-item header-button my-2 px-4 ">
-                            <a className="" href=" ">
-                                {button2()}
-                            </a>
+                            <button className="button2">
+                                <a className="text-light" href=" ">
+                                    Folow Us
+                                </a>
+                            </button>
                         </li>
                     </div>
                 </div>

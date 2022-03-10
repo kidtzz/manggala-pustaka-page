@@ -46,14 +46,14 @@ const Hcontent = () => {
                                     Madya, Mangun, Karso
                                 </h5>
                                 <a
-                                    className="btn btn-outline-light btn-lg m-2"
+                                    className="btn btn-outline-light  btn-lg m-2 animate__animated animate__fadeInDown"
                                     href="mailto:manggalapustaka@gmail.com"
                                     rel="follow"
                                 >
                                     Kontak Kami
                                 </a>
                                 <a
-                                    className="btn btn-primary btn-lg m-2"
+                                    className="p-2 px-4 mx-3 button2 animate__animated animate__fadeInDown scrollto"
                                     href={proposal}
                                     target="_blank"
                                     role="button"
@@ -69,7 +69,7 @@ const Hcontent = () => {
                 <div className="carousel-item">
                     <div className="mask">
                         <div className="d-flex justify-content-center align-items-center h-100">
-                            <div className="text-white text-center">
+                            <div className="text-white text-center animate__animated animate__fadeInDown">
                                 <h2>
                                     Manggala Pustaka berdiri sejak 17 agustus
                                     2021
@@ -82,17 +82,17 @@ const Hcontent = () => {
                 <div className="carousel-item">
                     <div className="mask">
                         <div className="d-flex justify-content-center align-items-center h-100">
-                            <div className="text-white text-center">
-                                <h2>
+                            <div className="text-white text-center ">
+                                <h2 className="animate__animated animate__fadeInDown">
                                     Manggala Pustaka memiliki berbagai kegiatan
                                     menarik
                                 </h2>
                                 <a
-                                    className="btn btn-primary btn-lg m-2"
+                                    className="btn btn-primary btn-lg m-2 animate__animated animate__fadeInUp"
                                     href="#kegiatan"
                                     role="button"
                                 >
-                                    let's see
+                                    Read More
                                 </a>
                             </div>
                         </div>
@@ -102,22 +102,22 @@ const Hcontent = () => {
                     <div className="mask">
                         <div className="d-flex justify-content-center align-items-center h-100">
                             <div className="text-white text-center">
-                                <h2>
+                                <h2 className="animate__animated animate__fadeInDown">
                                     Event
-                                    <u className="color-text fw-bold">
+                                    <u className="color-text ">
                                         "Manggala Pustaka"
                                     </u>
                                     dengan
-                                    <u className="color-text fw-bold">
+                                    <u className="color-text">
                                         "IYOIN LC SOLO"
                                     </u>
                                 </h2>
                                 <a
-                                    className="btn btn-primary btn-lg m-2"
+                                    className="btn btn-primary btn-lg m-2 animate__animated animate__fadeInUp"
                                     href="#kegiatan"
                                     role="button"
                                 >
-                                    let's see
+                                    Read More
                                 </a>
                             </div>
                         </div>

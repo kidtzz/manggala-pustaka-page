@@ -1,4 +1,9 @@
 /* From cssbuttons.io */
+// cara manggil
+// export const button1 = () => {
+//     return <button className="button1"> Follow Us</button>;
+// };
+
 .button1 {
     --color: #fff;
     font-family: inherit;
@@ -82,9 +87,16 @@
     -o-border-radius: 5px;
 }
 
+// cara manggil
+// export const button2 = () => {
+//     return <button className="button2 "> Follow Us</button>;
+// };
+
 .button2:hover {
     animation: ani 8s linear infinite;
     border: none;
+    text-decoration: none;
+    color: #fff;
 }
 
 @keyframes ani {

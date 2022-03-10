@@ -6,6 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "aos";
 import "aos/dist/aos.css";
+import "./assets/css/Button.scss";
+
 import Navbar from "../src/component/Navbar/Navbar";
 import Hcontent from "./component/hcontent/Hcontent";
 import About from "../src/component/About/About";
