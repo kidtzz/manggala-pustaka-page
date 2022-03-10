@@ -1,0 +1,47 @@
+#introCarousel,
+#introCarousel .carousel-inner,
+#introCarousel .carousel-item,
+#introCarousel .carousel-inner .mask,
+#introCarousel .carousel-item .active {
+    height: 100vh;
+}
+
+#introCarousel .carousel-item:nth-child(1) {
+    background-image: url("../../img/BG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#introCarousel .carousel-item:nth-child(2) {
+    background-image: url("../../img/galery/5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#introCarousel .carousel-item:nth-child(3) {
+    background-image: url("../../img/profil.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#introCarousel .carousel-item:nth-child(4) {
+    background-image: url("../../img/bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#introCarousel .carousel-item .color-text {
+    background: -webkit-linear-gradient(
+        32deg,
+        #03a9f4,
+        #f441a5,
+        #ffeb3b,
+        #03a9f4
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

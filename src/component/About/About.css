@@ -1,0 +1,14 @@
+.about img {
+    cursor: pointer;
+    align-self: center;
+    opacity: 0.9;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    -ms-border-radius: 500px;
+    -o-border-radius: 500px;
+}
+
+.about .col-md-5 {
+    text-align: justify;
+}
