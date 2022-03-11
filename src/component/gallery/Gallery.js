@@ -1,90 +1,116 @@
-import React, { useState } from "react";
-import FsLightbox from "fslightbox-react";
-import "./Gallery";
-import imgKes from "../../img/galery/2.jpg";
-import imgPanhan from "../../img/galery/10.jpg";
-import imgWarna from "../../img/galery/8.jpg";
-import imgMengaji from "../../img/galery/14.jpg";
-import imgMalam from "../../img/galery/11.jpg";
-import imgDarurat from "../../img/galery/4.jpg";
+import React, { useEffect, useState } from "react";
+import "./Gallery.scss";
+import DataGallery from "./DataGallery.js";
+import { SRLWrapper } from "simple-react-lightbox";
 
 function Gallery() {
-    const [toggler, setToggler] = useState(false);
+    const [tag, setTag] = useState("all");
+    const [filteredImages, setFilteredImages] = useState([]);
+
+    useEffect(() => {
+        tag === "all"
+            ? setFilteredImages(DataGallery)
+            : setFilteredImages(
+                  DataGallery.filter((image) => image.tag === tag)
+              );
+    }, [tag]);
 
     return (
-        <div className="container">
-            <div class="row justify-content-center text-white pt-5 pb-0">
-                <h4 className="text-dark text-uppercase mb-4 fw-bold text-center">
-                    Gallery
-                </h4>
-                <div class="col-lg-4 col-md-12 mb-lg-0">
-                    <div href=" col-4 mb-4">
-                        <img
-                            onClick={() => setToggler(!toggler)}
-                            src={imgKes}
-                            alt=""
-                            className="img-fluid shadow-1-strong rounded  mb-3"
-                        ></img>
-                    </div>
-                    <div href=" col-4 mb-4">
-                        <img
-                            onClick={() => setToggler(!toggler)}
-                            src={imgMalam}
-                            alt=""
-                            className=" img-fluid shadow-1-strong rounded  mb-3  "
-                        ></img>
-                    </div>
+        <div className=" portfolio pt-5">
+            <div className="container">
+                <div className="tags">
+                    <TagButton
+                        name="all"
+                        tagActive={tag === "all" ? true : false}
+                        handleSetTag={setTag}
+                    />{" "}
+                    /
+                    <TagButton
+                        name="new"
+                        tagActive={tag === "new" ? true : false}
+                        handleSetTag={setTag}
+                    />{" "}
+                    /
+                    <TagButton
+                        name="free"
+                        tagActive={tag === "free" ? true : false}
+                        handleSetTag={setTag}
+                    />{" "}
+                    /
+                    <TagButton
+                        name="pro"
+                        tagActive={tag === "pro" ? true : false}
+                        handleSetTag={setTag}
+                    />
                 </div>
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <div href=" col-4 mb-4">
-                        <img
-                            onClick={() => setToggler(!toggler)}
-                            src={imgWarna}
-                            alt=""
-                            className="w-100 shadow-1-strong rounded mb-3"
-                        ></img>
-                    </div>
-                    <div href=" col-4 mb-4">
-                        <img
-                            onClick={() => setToggler(!toggler)}
-                            src={imgMengaji}
-                            alt=""
-                            className=" w-100 shadow-1-strong rounded mb-3  "
-                        ></img>
-                    </div>
+                {/* <FsLightbox> */}
+                <div class="row portfolio-container border">
+                    <SRLWrapper>
+                        <div>
+                            {filteredImages.map((image) => (
+                                // <div key={image.id} className="image-card">
+                                //     <a href={image.imageName}>
+                                //         <img
+                                //             className="image"
+                                //             src={image.imageName}
+                                //             alt=""
+                                //         />
+                                //     </a>
+                                // </div>
+
+                                <div
+                                    class="col-lg-4 col-md-6 portfolio-item filter-app  "
+                                    key={image.id}
+                                >
+                                    <div class="portfolio-wrap ">
+                                        <img
+                                            src={image.imageName}
+                                            class="img-fluid"
+                                            alt=""
+                                        />
+                                        <div class="portfolio-info">
+                                            <h4>App 1</h4>
+                                            <p>App</p>
+                                            <div class="portfolio-links">
+                                                <a
+                                                    href={image.imageName}
+                                                    data-gallery="portfolioGallery"
+                                                    class="portfolio-lightbox"
+                                                    title="App 1"
+                                                >
+                                                    <i class="bx bx-plus"></i>
+                                                </a>
+                                                <a
+                                                    href="portfolio-details.html"
+                                                    class="portfolio-details-lightbox"
+                                                    data-glightbox="type: external"
+                                                    title="Portfolio Details"
+                                                >
+                                                    <i class="bx bx-link"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </SRLWrapper>
                 </div>
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <div href=" col-4 mb-4">
-                        <img
-                            onClick={() => setToggler(!toggler)}
-                            src={imgPanhan}
-                            alt=""
-                            className="w-100 shadow-1-strong rounded mb-3"
-                        ></img>
-                    </div>
-                    <div href=" col-4 mb-4">
-                        <img
-                            onClick={() => setToggler(!toggler)}
-                            src={imgDarurat}
-                            alt=""
-                            className=" w-100 shadow-1-strong rounded mb-3  "
-                        ></img>
-                    </div>
-                </div>
-                <FsLightbox
-                    toggler={toggler}
-                    sources={[
-                        imgKes,
-                        imgMalam,
-                        imgWarna,
-                        imgMengaji,
-                        imgPanhan,
-                        imgDarurat,
-                    ]}
-                />
+                {/* </FsLightbox> */}
             </div>
         </div>
     );
 }
+
+const TagButton = ({ name, handleSetTag, tagActive }) => {
+    return (
+        <button
+            className={`tag ${tagActive ? "active" : null}`}
+            onClick={() => handleSetTag(name)}
+        >
+            {name.toUpperCase()}
+        </button>
+    );
+};
 
 export default Gallery;

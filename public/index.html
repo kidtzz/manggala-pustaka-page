@@ -28,12 +28,58 @@
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <!--  -->
         <title>Manggala Pustaka</title>
+        <!-- <style>
+            .back-to-top {
+                position: fixed;
+                visibility: hidden;
+                opacity: 0;
+                right: 15px;
+                bottom: 15px;
+                z-index: 9999999999999999;
+                background: black;
+                width: 200px;
+                height: 200px;
+                border-radius: 4px;
+                transition: all 0.4s;
+                border: 2px solid black;
+            }
+
+            .back-to-top i {
+                font-size: 28px;
+                color: #fff;
+                line-height: 0;
+            }
+            .back-to-top:hover {
+                background: #e1444d;
+                color: #fff;
+            }
+            .back-to-top.activeddd {
+                visibility: visible;
+                opacity: 1;
+            }
+        </style> -->
     </head>
     <body>
         <div id="root"></div>
     </body>
+    <!-- <a
+        href="#"
+        class="back-to-top d-flex align-items-center justify-contents-center"
+        ><i class="bi bi-arrow-up-short"></i
+    ></a> -->
 
     <script type="text/javascript">
+        // let backtotop = select(".back-to-top");
+        // if (backtotop) {
+        //     const toggleBacktotop = () => {
+        //         if (window.scrollY > 100) {
+        //             backtotop.classList.add("activeddd");
+        //         } else {
+        //             backtotop.classList.remove("activeddd");
+        //         }
+        //     };
+        // }
+
         $(function () {
             var navbar = $(".header-inner");
             $(window).scroll(function () {
