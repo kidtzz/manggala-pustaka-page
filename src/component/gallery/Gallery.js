@@ -18,85 +18,76 @@ function Gallery() {
     return (
         <div className=" portfolio pt-5">
             <div className="container">
-                <div className="tags">
+                <div className="tags  justify-content-center">
                     <TagButton
                         name="all"
                         tagActive={tag === "all" ? true : false}
                         handleSetTag={setTag}
                     />{" "}
-                    /
                     <TagButton
                         name="new"
                         tagActive={tag === "new" ? true : false}
                         handleSetTag={setTag}
                     />{" "}
-                    /
                     <TagButton
                         name="free"
                         tagActive={tag === "free" ? true : false}
                         handleSetTag={setTag}
                     />{" "}
-                    /
                     <TagButton
                         name="pro"
                         tagActive={tag === "pro" ? true : false}
                         handleSetTag={setTag}
                     />
                 </div>
-                {/* <FsLightbox> */}
-                <div class="row portfolio-container border">
-                    <SRLWrapper>
-                        <div>
-                            {filteredImages.map((image) => (
-                                // <div key={image.id} className="image-card">
-                                //     <a href={image.imageName}>
-                                //         <img
-                                //             className="image"
-                                //             src={image.imageName}
-                                //             alt=""
-                                //         />
-                                //     </a>
-                                // </div>
 
-                                <div
-                                    class="col-lg-4 col-md-6 portfolio-item filter-app  "
-                                    key={image.id}
-                                >
-                                    <div class="portfolio-wrap ">
-                                        <img
-                                            src={image.imageName}
-                                            class="img-fluid"
-                                            alt=""
-                                        />
-                                        <div class="portfolio-info">
-                                            <h4>App 1</h4>
-                                            <p>App</p>
-                                            <div class="portfolio-links">
-                                                <a
-                                                    href={image.imageName}
-                                                    data-gallery="portfolioGallery"
-                                                    class="portfolio-lightbox"
-                                                    title="App 1"
-                                                >
-                                                    <i class="bx bx-plus"></i>
-                                                </a>
-                                                <a
-                                                    href="portfolio-details.html"
-                                                    class="portfolio-details-lightbox"
-                                                    data-glightbox="type: external"
-                                                    title="Portfolio Details"
-                                                >
-                                                    <i class="bx bx-link"></i>
-                                                </a>
-                                            </div>
+                <div class="row portfolio-container ">
+                    {filteredImages.map((image) => (
+                        // <div key={image.id} className="image-card">
+                        //     <a href={image.imageName}>
+                        //         <img
+                        //             className="image"
+                        //             src={image.imageName}
+                        //             alt=""
+                        //         />
+                        //     </a>
+                        // </div>
+                        <div key={image.id}>
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app  ">
+                                <div class="portfolio-wrap ">
+                                    {/* <SRLWrapper> */}
+                                    <img
+                                        src={image.imageName}
+                                        class="img-fluid"
+                                        alt=""
+                                    />
+                                    <div class="portfolio-info">
+                                        <h4>App 1</h4>
+                                        <p>App</p>
+                                        <div class="portfolio-links">
+                                            <a
+                                                href={image.imageName}
+                                                data-gallery="portfolioGallery"
+                                                class="portfolio-lightbox"
+                                                title="App 1"
+                                            >
+                                                <i class="bi bi-plus"></i>
+                                            </a>
+                                            <a
+                                                href=" "
+                                                class="portfolio-details-lightbox"
+                                                title="Portfolio Details"
+                                            >
+                                                <i class="bi bi-link"></i>
+                                            </a>
                                         </div>
                                     </div>
+                                    {/* </SRLWrapper> */}
                                 </div>
-                            ))}
+                            </div>
                         </div>
-                    </SRLWrapper>
+                    ))}
                 </div>
-                {/* </FsLightbox> */}
             </div>
         </div>
     );

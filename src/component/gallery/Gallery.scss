@@ -1,33 +1,43 @@
 .portfolio .portfolio-item {
     margin-bottom: 30px;
 }
-// .portfolio #portfolio-flters {
-//     padding: 0;
-//     margin: 0 auto 20px auto;
-//     list-style: none;
-//     text-align: center;
-// }
-// .portfolio #portfolio-flters li {
-//     cursor: pointer;
-//     display: inline-block;
-//     padding: 8px 15px 10px 15px;
-//     font-size: 14px;
-//     font-weight: 600;
-//     line-height: 1;
-//     text-transform: uppercase;
-//     color: #444444;
-//     margin-bottom: 5px;
-//     transition: all 0.3s ease-in-out;
-//     border-radius: 3px;
-// }
-// .portfolio #portfolio-flters li:hover,
-// .portfolio #portfolio-flters li.filter-active {
-//     color: #fff;
-//     background: #d9232d;
-// }
-// .portfolio #portfolio-flters li:last-child {
-//     margin-right: 0;
-// }
+
+.portfolio .tags {
+    padding: 0;
+    margin: 0 auto 20px auto;
+    list-style: none;
+    border: none;
+    text-align: center;
+}
+.portfolio .tags button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 15px 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #444444;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+    border: none;
+}
+.portfolio .tags button:hover,
+.portfolio .tags button.filter-active {
+    color: #fff;
+    background: rgb(0, 113, 168);
+    background: linear-gradient(
+        94deg,
+        rgba(0, 113, 168, 1) 0%,
+        rgba(7, 142, 170, 1) 49%,
+        rgba(14, 167, 171, 1) 100%
+    );
+}
+.portfolio .tags button:last-child {
+    margin-right: 0;
+}
+
 .portfolio .portfolio-wrap {
     transition: 0.3s;
     position: relative;
