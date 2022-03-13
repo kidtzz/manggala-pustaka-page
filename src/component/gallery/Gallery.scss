@@ -46,7 +46,7 @@
     background: rgba(85, 98, 112, 0.6);
 }
 .portfolio .portfolio-wrap::before {
-    content: "";
+    // content: "";
     background: rgba(85, 98, 112, 0.6);
     position: absolute;
     left: 0;
@@ -57,6 +57,7 @@
     z-index: 2;
     opacity: 0;
 }
+
 .portfolio .portfolio-wrap img {
     transition: all ease-in-out 0.3s;
 }

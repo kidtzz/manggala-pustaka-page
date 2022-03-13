@@ -40,47 +40,44 @@ function Gallery() {
                         handleSetTag={setTag}
                     />
                 </div>
-
-                {filteredImages.map((image) => (
-                    <div class="row portfolio-container ">
-                        <div class="col-lg-4 col-md-6 border portfolio-item filter-app">
-                            <h1>ini 1</h1>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app border">
-                            <h1>ini 2</h1>
-                            {/* <div class="portfolio-wrap ">
-                                    <SRLWrapper>
-                                        <img
-                                            src={image.imageName}
-                                            class="img-fluid"
-                                            alt=""
-                                        />
-                                        <div class="portfolio-info">
-                                            <h4>App 1</h4>
-                                            <p>App</p>
-                                            <div class="portfolio-links">
+                <div class="row portfolio-container ">
+                    {filteredImages.map((image) => {
+                        return (
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app ">
+                                <div class="portfolio-wrap ">
+                                    <img
+                                        src={image.imageName}
+                                        class="img-fluid"
+                                        alt=""
+                                    />
+                                    <div class="portfolio-info">
+                                        <h4>App 1</h4>
+                                        <p>App</p>
+                                        <div class="portfolio-links">
+                                            <SRLWrapper>
                                                 <a
                                                     href={image.imageName}
-                                                    data-gallery="portfolioGallery"
+                                                    // data-gallery="portfolioGallery"
                                                     class="portfolio-lightbox"
                                                     title="App 1"
                                                 >
                                                     <i class="bi bi-plus"></i>
                                                 </a>
-                                                <a
-                                                    href=" "
-                                                    class="portfolio-details-lightbox"
-                                                    title="Portfolio Details"
-                                                >
-                                                    <i class="bi bi-link"></i>
-                                                </a>
-                                            </div>
+                                            </SRLWrapper>
+                                            <a
+                                                href=" "
+                                                class="portfolio-details-lightbox"
+                                                title="Portfolio Details"
+                                            >
+                                                <i class="bi bi-link"></i>
+                                            </a>
                                         </div>
-                                    </SRLWrapper>
-                                </div> */}
-                        </div>
-                    </div>
-                ))}
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
         </div>
     );
