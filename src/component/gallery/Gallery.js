@@ -52,18 +52,18 @@ function Gallery() {
                                     />
                                     <div class="portfolio-info">
                                         <h4>App 1</h4>
-                                        <p>App</p>
+                                        <p>hhh</p>
                                         <div class="portfolio-links">
-                                            {/* <SRLWrapper> */}
-                                            <a
-                                                href={image.imageName}
-                                                data-gallery="portfolioGallery"
-                                                class="portfolio-lightbox"
-                                                title="App 1"
-                                            >
-                                                <i class="bi bi-plus"></i>
-                                            </a>
-                                            {/* </SRLWrapper> */}
+                                            <SRLWrapper>
+                                                <a
+                                                    href={image.imageName}
+                                                    data-gallery="portfolioGallery"
+                                                    class="portfolio-lightbox"
+                                                    title="App 1"
+                                                >
+                                                    <i class="bi bi-plus"></i>
+                                                </a>
+                                            </SRLWrapper>
                                             <a
                                                 href=" "
                                                 class="portfolio-details-lightbox"
