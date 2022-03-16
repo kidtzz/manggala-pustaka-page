@@ -129,7 +129,7 @@ export const Kegiatan2 = () => {
                                     <br />
                                     <a
                                         href="https://www.instagram.com/manggalapustaka/"
-                                        className="btn btn-primary"
+                                        className="btn button2"
                                     >
                                         Selanjutnya
                                     </a>
@@ -157,7 +157,7 @@ export const Kegiatan2 = () => {
                                     </p>
                                     <a
                                         href="https://www.instagram.com/manggalapustaka/"
-                                        className="btn btn-primary"
+                                        className="btn button2"
                                     >
                                         Selanjutnya
                                     </a>
