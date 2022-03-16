@@ -4,11 +4,11 @@ import DataGallery from "./DataGallery.js";
 import { SRLWrapper } from "simple-react-lightbox";
 
 function Gallery() {
-    const [tag, setTag] = useState("all");
+    const [tag, setTag] = useState("semua");
     const [filteredImages, setFilteredImages] = useState([]);
 
     useEffect(() => {
-        tag === "all"
+        tag === "semua"
             ? setFilteredImages(DataGallery)
             : setFilteredImages(
                   DataGallery.filter((image) => image.tag === tag)
@@ -20,23 +20,23 @@ function Gallery() {
             <div className="container">
                 <div className="tags  justify-content-center">
                     <TagButton
-                        name="all"
-                        tagActive={tag === "all" ? true : false}
+                        name="semua"
+                        tagActive={tag === "semua" ? true : false}
                         handleSetTag={setTag}
                     />{" "}
                     <TagButton
-                        name="new"
-                        tagActive={tag === "new" ? true : false}
+                        name="baru"
+                        tagActive={tag === "baru" ? true : false}
                         handleSetTag={setTag}
                     />{" "}
                     <TagButton
-                        name="free"
-                        tagActive={tag === "free" ? true : false}
+                        name="event"
+                        tagActive={tag === "event" ? true : false}
                         handleSetTag={setTag}
                     />{" "}
                     <TagButton
-                        name="pro"
-                        tagActive={tag === "pro" ? true : false}
+                        name="kegiatan"
+                        tagActive={tag === "kegiatan" ? true : false}
                         handleSetTag={setTag}
                     />
                 </div>
@@ -45,34 +45,13 @@ function Gallery() {
                         return (
                             <div class="col-lg-4 col-md-6 portfolio-item filter-app ">
                                 <div class="portfolio-wrap ">
-                                    <img
-                                        src={image.imageName}
-                                        class="img-fluid"
-                                        alt=""
-                                    />
-                                    <div class="portfolio-info">
-                                        <h4>App 1</h4>
-                                        <p>hhh</p>
-                                        <div class="portfolio-links">
-                                            <SRLWrapper>
-                                                <a
-                                                    href={image.imageName}
-                                                    data-gallery="portfolioGallery"
-                                                    class="portfolio-lightbox"
-                                                    title="App 1"
-                                                >
-                                                    <i class="bi bi-plus"></i>
-                                                </a>
-                                            </SRLWrapper>
-                                            <a
-                                                href=" "
-                                                class="portfolio-details-lightbox"
-                                                title="Portfolio Details"
-                                            >
-                                                <i class="bi bi-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
+                                    <SRLWrapper>
+                                        <img
+                                            src={image.imageName}
+                                            class="img-fluid"
+                                            alt=""
+                                        />
+                                    </SRLWrapper>
                                 </div>
                             </div>
                         );

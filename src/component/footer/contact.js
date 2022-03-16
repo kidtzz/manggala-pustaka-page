@@ -31,7 +31,7 @@ export class ExampleApp extends React.Component {
                 <StatusAlert />
 
                 <button
-                    class="btn btn-primary"
+                    class="btn button2 m-1"
                     type="submit"
                     onClick={this.showSuccessAlert}
                 >

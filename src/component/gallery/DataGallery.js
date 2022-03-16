@@ -8,27 +8,27 @@ const DataGallery = [
     {
         id: "1",
         imageName: imgKes,
-        tag: "new",
+        tag: "baru",
     },
     {
         id: "2",
         imageName: imgPanhan,
-        tag: "pro",
+        tag: "event",
     },
     {
         id: "3",
         imageName: imgWarna,
-        tag: "free",
+        tag: "kegiatan",
     },
     {
         id: "4",
         imageName: imgMengaji,
-        tag: "free",
+        tag: "kegiatan",
     },
     {
         id: "5",
         imageName: imgMalam,
-        tag: "free",
+        tag: "event",
     },
 ];
 

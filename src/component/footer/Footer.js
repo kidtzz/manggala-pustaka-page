@@ -17,41 +17,45 @@ export const Footer = () => {
                             Profile
                         </h5>
                         <div className="footer-link d-block text-secondary ">
-                            <p>
-                                {" "}
-                                <i class="fas fa-map-marker-alt mr"> </i> Dus.
-                                Manggal RT 17/ Rw 06 Des. Simo Kec. Simo Kab.
-                                Boyolali
-                            </p>
-                            <p>
-                                {" "}
-                                <i class="fab fa-whatsapp mr"></i> 08153969986
-                            </p>
-                            <p>
-                                {" "}
-                                <i class="fas fa-envelope mr"></i>{" "}
-                                manggalapustaka@gmail.com
-                            </p>
-                            <div className="col-lg-6 col-md-6 col-xl-6  mb-5 mb-lg-0">
+                            <div className="d-flex ">
+                                <ul className="footer-social">
+                                    <li>
+                                        <i class="fas fa-map-marker-alt mr"></i>
+                                    </li>
+                                    <br />
+                                    <li>
+                                        <i class="fab fa-whatsapp mr"></i>{" "}
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope mr"></i>
+                                    </li>
+                                </ul>
+                                <ul className="footer-social-text">
+                                    <li>
+                                        Dus. Manggal RT 17/ Rw 06 Des. Simo Kec.
+                                        Simo Kab. Boyolali
+                                    </li>
+                                    <li>08153969986</li>
+                                    <li>manggalapustaka@gmail.com</li>
+                                </ul>
+                            </div>
+
+                            <div className="col-lg-6 col-md-6 col-xl-6  mb-5 mb-lg-0 footer-icon-social mt-2">
                                 <a
-                                    class="btn btn-outline-primary btn-floating m-1"
+                                    class="m-2"
                                     href="https://web.facebook.com/profile.php?id=100076998842478"
                                     role="button"
                                 >
                                     <i class=" fab fa-facebook-square"></i>
                                 </a>
                                 <a
-                                    class="btn btn-outline-dark btn-floating m-1"
+                                    class="m-2"
                                     href="https://www.instagram.com/manggalapustaka/"
                                     role="button"
                                 >
                                     <i class="fab fa-instagram"></i>
                                 </a>
-                                <a
-                                    class="btn btn-outline-danger btn-floating m-1"
-                                    href="#!"
-                                    role="button"
-                                >
+                                <a class="m-2" href="#!" role="button">
                                     <i class="fab fa-youtube"></i>
                                 </a>
                             </div>
