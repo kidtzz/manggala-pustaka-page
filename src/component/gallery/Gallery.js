@@ -40,18 +40,18 @@ function Gallery() {
                         handleSetTag={setTag}
                     />
                 </div>
-                <div class="row portfolio-container ">
+                <div className="row portfolio-container ">
                     {filteredImages.map((image) => {
                         return (
                             <div
-                                class="col-lg-4 col-md-6 portfolio-item filter-app "
+                                className="col-lg-4 col-md-6 portfolio-item filter-app "
                                 data-aos="flip-down"
                             >
-                                <div class="portfolio-wrap ">
+                                <div className="portfolio-wrap ">
                                     <SRLWrapper>
                                         <img
                                             src={image.imageName}
-                                            class="img-fluid"
+                                            className="img-fluid"
                                             alt=""
                                         />
                                     </SRLWrapper>

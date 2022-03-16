@@ -13,10 +13,9 @@ const Hcontent = () => {
     return (
         <div
             id="introCarousel"
-            className="carousel slide carousel-fade shadow-2-strong"
+            className=" carousel slide carousel-fade carousel slide carousel-fade shadow-2-strong"
             data-bs-ride="carousel"
             data-bs-interval="5000"
-            class="carousel slide carousel-fade"
         >
             <ol className="carousel-indicators">
                 <li
@@ -133,25 +132,25 @@ const Hcontent = () => {
 
           <!-- Controls --> */}
             <a
-                class="carousel-control-prev"
+                className="carousel-control-prev"
                 href="#introCarousel"
                 role="button"
                 data-bs-slide="prev"
             >
                 <span
-                    class="carousel-control-prev-icon bi bi-chevron-left"
+                    className="carousel-control-prev-icon bi bi-chevron-left"
                     aria-hidden="true"
                 ></span>
             </a>
 
             <a
-                class="carousel-control-next"
+                className="carousel-control-next"
                 href="#introCarousel"
                 role="button"
                 data-bs-slide="next"
             >
                 <span
-                    class="carousel-control-next-icon bi bi-chevron-right"
+                    className="carousel-control-next-icon bi bi-chevron-right"
                     aria-hidden="true"
                 ></span>
             </a>

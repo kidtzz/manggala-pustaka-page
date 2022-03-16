@@ -12,15 +12,15 @@ const Visi = () => {
         AOS.refresh();
     }, []);
     return (
-        <section class="visi  " id="visi">
-            <div class="jumbotron ">
-                <div class="container px-5 pb-5 ">
-                    <div class="row d-flex justify-content-center align-items-center text-dark">
+        <section className="visi  " id="visi">
+            <div className="jumbotron ">
+                <div className="container px-5 pb-5 ">
+                    <div className="row d-flex justify-content-center align-items-center text-dark">
                         <div
-                            class="col-md-5 col-lg-5 col-xl-5 mx-auto mt-5 "
+                            className="col-md-5 col-lg-5 col-xl-5 mx-auto mt-5 "
                             data-aos="zoom-out-up"
                         >
-                            <h4 class=" mb-4 fw-bold text-left">Visi</h4>
+                            <h4 className=" mb-4 fw-bold text-left">Visi</h4>
                             <p>
                                 Menjadi perpustakaan yang membudayakan
                                 masyarakat gemar membaca serta memperkaya
@@ -28,10 +28,10 @@ const Visi = () => {
                             </p>
                         </div>
                         <div
-                            class="col-md-5 col-lg-5 col-xl-5 mx-auto mt-5 "
+                            className="col-md-5 col-lg-5 col-xl-5 mx-auto mt-5 "
                             data-aos="zoom-out-up"
                         >
-                            <h4 class="text-dark mb-4 fw-bold text-left">
+                            <h4 className="text-dark mb-4 fw-bold text-left">
                                 Misi
                             </h4>
                             <ul type="1">
