@@ -21,9 +21,9 @@ const About = () => {
                         <div className="col-md-5 col-lg-5 col-xl-5 mx-auto mt-5 ">
                             <div
                                 className="img-fluid"
-                                data-aos="fade-bottom"
-                                data-aos-offset="300"
-                                data-aos-easing="ease-in-sine"
+                                data-aos="flip-left"
+                                data-aos-easing="ease-out-cubic"
+                                data-aos-duration="2000"
                             >
                                 <img
                                     src={profil}
@@ -32,10 +32,17 @@ const About = () => {
                                 ></img>
                             </div>
                         </div>
-                        <div className="col-md-5 col-lg-5 col-xl-5 mx-auto mt-6 pt-5 ">
-                            <h4 className=" mb-3 fw-bold text-left animate__animated animate__fadeInDown">
-                                Tentang Kami
-                            </h4>
+                        <div
+                            className="col-md-5 col-lg-5 col-xl-5 mx-auto mt-6 pt-5 "
+                            data-aos="fade-up"
+                            data-aos-anchor-placement="bottom-bottom"
+                        >
+                            <div className="header-kegiatan  mb-5">
+                                <h4 className="mb-3 fw-bold text-left animate__animated animate__fadeInDown">
+                                    Tentang Kami
+                                </h4>
+                                <span className="section-separator m-4 px-1"></span>
+                            </div>
                             <p className="mb-4 animate__animated animate__fadeInUp">
                                 Taman Baca Masyarakat (TBM) Manggala pustaka
                                 merupakan satu² nya Taman baca yang ada di desa

@@ -28,10 +28,17 @@ export const Kegiatan = () => {
     return (
         <section className="kegiatan  " id="kegiatan">
             <div className="jumbotron ">
-                <div className="container pt-4 pb-3 ">
-                    <h4 className="text-dark text-uppercase mb-4 fw-bold text-center">
-                        KEGIATAN PENDIDIKAN
-                    </h4>
+                <div
+                    className="container pt-4 pb-3 "
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom"
+                >
+                    <div className="header-kegiatan text-center mb-5">
+                        <h4 className="text-dark  mb-4 fw-bold text-center animate__animated animate__fadeInDown">
+                            Kegiatan Penddikan
+                        </h4>
+                        <span className="section-separator"></span>
+                    </div>
                     <Carousel
                         swipeable={false}
                         draggable={false}
@@ -48,7 +55,7 @@ export const Kegiatan = () => {
                     >
                         {ListData.map((item, index) => {
                             return (
-                                <div className="card card-bg mb-3 mx-3">
+                                <div className="card card-bg mb-3 mx-3 animate__animated animate__fadeInUp">
                                     <img
                                         src={item.img}
                                         className="img-fluid w-100"
@@ -89,11 +96,18 @@ export const Kegiatan2 = () => {
     return (
         <section className="kegiatan" id="kegiatan">
             <div className="jumbotron ">
-                <div className="container pt-4 pb-3 card">
-                    <h4 className="text-dark text-uppercase mb-4 fw-bold text-center">
-                        KEGIATAN MASYARAKAT
-                    </h4>
-                    <div className="carousel-inner carousel-inner2 justify-content-center">
+                <div
+                    className="container pt-4 pb-3 "
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom"
+                >
+                    <div className="header-kegiatan text-center mb-5 animate__animated animate__fadeInDown">
+                        <h4 className="text-dark  mb-4 fw-bold text-center">
+                            Kegiatan Masyarakat
+                        </h4>
+                        <span className="section-separator"></span>
+                    </div>
+                    <div className="carousel-inner carousel-inner2 justify-content-center animate__animated animate__fadeInUp">
                         <div className="carousel-item active carousel-item2">
                             <div className="card">
                                 <img

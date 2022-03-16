@@ -43,7 +43,10 @@ function Gallery() {
                 <div class="row portfolio-container ">
                     {filteredImages.map((image) => {
                         return (
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-app ">
+                            <div
+                                class="col-lg-4 col-md-6 portfolio-item filter-app "
+                                data-aos="flip-down"
+                            >
                                 <div class="portfolio-wrap ">
                                     <SRLWrapper>
                                         <img

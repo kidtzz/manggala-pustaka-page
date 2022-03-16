@@ -18,7 +18,7 @@ const Visi = () => {
                     <div class="row d-flex justify-content-center align-items-center text-dark">
                         <div
                             class="col-md-5 col-lg-5 col-xl-5 mx-auto mt-5 "
-                            data-aos="zoom-in-left "
+                            data-aos="zoom-out-up"
                         >
                             <h4 class=" mb-4 fw-bold text-left">Visi</h4>
                             <p>
@@ -29,7 +29,7 @@ const Visi = () => {
                         </div>
                         <div
                             class="col-md-5 col-lg-5 col-xl-5 mx-auto mt-5 "
-                            data-aos="zoom-in-right "
+                            data-aos="zoom-out-up"
                         >
                             <h4 class="text-dark mb-4 fw-bold text-left">
                                 Misi
