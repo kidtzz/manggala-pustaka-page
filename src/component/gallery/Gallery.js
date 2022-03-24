@@ -38,6 +38,11 @@ function Gallery() {
                         name="kegiatan"
                         tagActive={tag === "kegiatan" ? true : false}
                         handleSetTag={setTag}
+                    />{" "}
+                    <TagButton
+                        name="lainnya"
+                        tagActive={tag === "lainnya" ? true : false}
+                        handleSetTag={setTag}
                     />
                 </div>
                 <div className="row portfolio-container ">
