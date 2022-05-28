@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./Visi.scss";
+import "../../assets/scss/Visi.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
 

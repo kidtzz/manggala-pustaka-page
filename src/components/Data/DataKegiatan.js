@@ -1,8 +1,8 @@
-import imgwarnai from "../../img/galery/12.jpg";
-import imgmengaji from "../../img/galery/14.jpg";
-import imgkesenian from "../../img/galery/17.jpg";
-import imgdarurat from "../../img/galery/4.jpg";
-import imgpanahan from "../../img/galery/10.jpg";
+import imgwarnai from "../../assets/img/galery/12.jpg";
+import imgmengaji from "../../assets/img/galery/14.jpg";
+import imgkesenian from "../../assets/img/galery/17.jpg";
+import imgdarurat from "../../assets/img/galery/4.jpg";
+import imgpanahan from "../../assets/img/galery/10.jpg";
 
 const DataKegiatan = [
     {

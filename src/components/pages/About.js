@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import "./About.scss";
-import profil from "../../img/profil.jpeg";
+import "../../assets/scss/About.scss";
+import profil from "../../assets/img/profil.jpeg";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
-import proposal from "../../file/proposal.pdf";
+import proposal from "../../assets/file/proposal.pdf";
 
 const About = () => {
     useEffect(() => {

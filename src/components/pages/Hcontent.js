@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./Hcontent.scss";
-import "../../assets/animate.css/animate.min.css";
-import proposal from "../../file/proposal.pdf";
+import "../../assets/scss/Hcontent.scss";
+import "../../assets/css/animate.css/animate.min.css";
+import proposal from "../../assets/file/proposal.pdf";
 
 const Hcontent = () => {
     useEffect(() => {

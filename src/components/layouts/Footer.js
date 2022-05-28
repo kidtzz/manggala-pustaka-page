@@ -1,6 +1,6 @@
 import React from "react";
-import Contact from "./contact";
-import "./footer.scss";
+import Contact from "../main/Contact";
+import "../../assets/scss/Footer.scss";
 
 export const BGFooter = () => {
     return <div id="BGFooter"></div>;
