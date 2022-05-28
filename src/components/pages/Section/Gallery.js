@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../../assets/scss/Gallery.scss";
+import "../../../assets/css/Gallery.min.css";
 import DataGallery from "../../Data/DataGallery.js";
 import { SRLWrapper } from "simple-react-lightbox";
 

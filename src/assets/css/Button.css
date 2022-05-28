@@ -1,0 +1,143 @@
+/* From cssbuttons.io */
+.button1 {
+  --color: #fff;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid tomato;
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+  background: tomato;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.button1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.button1:hover {
+  color: #000;
+}
+
+.button1:before {
+  top: 100%;
+  left: 100%;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.button1:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.button1:active:before {
+  background: #ff6347;
+  transition: background 0s;
+  -webkit-transition: background 0s;
+  -moz-transition: background 0s;
+  -ms-transition: background 0s;
+  -o-transition: background 0s;
+}
+
+/* From cssbuttons.io by @kirzin */
+.button2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  position: relative;
+  border: none;
+  font-size: 15px;
+  font-family: inherit;
+  color: #fff;
+  width: 7em;
+  height: 2.2em;
+  text-align: center;
+  background: #0071a8;
+  background: linear-gradient(94deg, #0071a8 0%, #078eaa 49%, #0ea7ab 100%);
+  background-size: 300%;
+  border-radius: 5px;
+  z-index: 1;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.button2:hover {
+  -webkit-animation: ani 8s linear infinite;
+          animation: ani 8s linear infinite;
+  border: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+@-webkit-keyframes ani {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+@keyframes ani {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.button2:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: #0071a8;
+  background: linear-gradient(94deg, #0071a8 0%, #078eaa 49%, #0ea7ab 100%);
+  background-size: 400%;
+  border-radius: 5px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.button2:hover::before {
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+}
+
+.button2:active {
+  background: #0071a8;
+  background: linear-gradient(94deg, #0071a8 0%, #078eaa 49%, #0ea7ab 100%);
+}
+/*# sourceMappingURL=Button.css.map */

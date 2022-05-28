@@ -23,8 +23,8 @@ a {
   position: fixed;
   top: 0;
   z-index: 99;
-  -webkit-box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.041);
-          box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.041);
+  -webkit-box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.042);
+          box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.042);
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
 }

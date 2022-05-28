@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../assets/scss/Kegiatan.scss";
+import "../../../assets/css/Kegiatan.min.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ListData from "../../Data/DataKegiatan";

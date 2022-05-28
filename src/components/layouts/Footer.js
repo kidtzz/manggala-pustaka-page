@@ -1,6 +1,6 @@
 import React from "react";
 import Contact from "../main/Contact";
-import "../../assets/scss/Footer.scss";
+import "../../assets/css/Footer.min.css";
 
 export default function Footer() {
     // CONTENT

@@ -65,7 +65,7 @@
 
 #introCarousel .carousel-item::before {
   content: "";
-  background-color: rgba(30, 35, 40, 0.6);
+  background-color: rgba(30, 36, 40, 0.6);
 }
 
 #introCarousel .carousel-container {

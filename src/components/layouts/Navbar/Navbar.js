@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../assets/scss/Navbar.scss";
+import "../../../assets/css/Navbar.min.css";
 import logo from "../../../assets/img/logo1.png";
 import { MenuItems, ListMenu } from "./MenuItems";
 
