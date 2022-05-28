@@ -2,25 +2,21 @@ import "./App.scss";
 import React, { Component } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+//Assetsnya
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "aos";
 import "aos/dist/aos.css";
 import "../src/assets/scss/Button.scss";
-// import "../src/assets/js/main.js";
+import "../src/assets/js/main.js";
 
 //Layouts
 import Navbar from "./components/layouts/Navbar/Navbar";
-import { Footer, BGFooter } from "./components/layouts/Footer";
-
+import Footer from "./components/layouts/Footer";
 //Pages
-import Hcontent from "./components/pages/Hcontent";
-import About from "./components/pages/About";
-import Visi from "./components/pages/Visi";
-import { Kegiatan, Kegiatan2 } from "./components/pages/Kegiatan";
-import Gallery from "./components/pages/Gallery";
+import LandingPage from "./components/pages/LandingPage";
 
-class App extends Component {
+export default class App extends Component {
     state = {
         isOpen: false,
     };
@@ -33,21 +29,16 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <div className="App ">
+                    {/* Headernya */}
                     <Navbar />
-                    <Hcontent />
+                    {/* Body Contentnya Disini */}
                     <Routes className="App-bg-content">
-                        <Route path="/" element={<About />} />
+                        <Route path="/" element={<LandingPage />} />
                     </Routes>
-                    <Visi />
-                    <Kegiatan />
-                    <Kegiatan2 />
-                    <Gallery />
-                    <BGFooter />
+                    {/* Footernya */}
                     <Footer />
                 </div>
             </BrowserRouter>
         );
     }
 }
-
-export default App;

@@ -1,10 +1,10 @@
 import React from "react";
-import "../../assets/scss/Kegiatan.scss";
+import "../../../assets/scss/Kegiatan.scss";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import ListData from "../Data/DataKegiatan";
-import imgkesehatan from "../../assets/img/galery/2.jpg";
-import imgpertanian from "../../assets/img/galery/5.jpg";
+import ListData from "../../Data/DataKegiatan";
+import imgkesehatan from "../../../assets/img/galery/2.jpg";
+import imgpertanian from "../../../assets/img/galery/5.jpg";
 
 // satu
 export const Kegiatan = () => {
