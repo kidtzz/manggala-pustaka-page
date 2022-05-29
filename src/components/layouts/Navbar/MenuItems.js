@@ -10,7 +10,7 @@ export const ListMenu = [
     },
     {
         title: "Tentang Kami",
-        url: "/About",
+        url: " ",
     },
 
     //Disini kalo mau menambahkan three navbarnya

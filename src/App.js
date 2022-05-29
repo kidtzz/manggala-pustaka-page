@@ -13,6 +13,7 @@ import "../src/assets/js/main.js";
 //Layouts
 import Navbar from "./components/layouts/Navbar/Navbar";
 import Footer from "./components/layouts/Footer";
+
 //Pages
 import LandingPage from "./components/pages/LandingPage";
 
