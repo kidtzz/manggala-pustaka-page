@@ -32,14 +32,12 @@ export default class App extends Component {
             <BrowserRouter>
                 <div className="App ">
                     {/* Headernya */}
-                    <Navbar />
                     {/* Body Contentnya Disini */}
                     <Routes className="App-bg-content">
                         <Route path="/" element={<LandingPage />} />
                         <Route path="/Login" element={<Login />} />
                     </Routes>
                     {/* Footernya */}
-                    <Footer />
                 </div>
             </BrowserRouter>
         );
