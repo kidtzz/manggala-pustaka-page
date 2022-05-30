@@ -40,9 +40,6 @@ export default function Footer() {
                                         <li>manggalapustaka@gmail.com</li>
                                     </ul>
                                     <br />
-                                    <NavLink to="/Login" className="nav-link">
-                                        Login Admin
-                                    </NavLink>
                                 </div>
 
                                 <div className="col-lg-6 col-md-6 col-xl-6  mb-5 mb-lg-0 footer-icon-social mt-2">
@@ -63,6 +60,9 @@ export default function Footer() {
                                     <a className="m-2" href="#!" role="button">
                                         <i className="fab fa-youtube"></i>
                                     </a>
+                                    <NavLink to="/Login" className="nav-link">
+                                        Login Admin
+                                    </NavLink>
                                 </div>
                             </div>
                         </div>
