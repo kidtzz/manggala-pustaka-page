@@ -1,6 +1,7 @@
 import React from "react";
 import Contact from "../main/Contact";
 import "../../assets/css/Footer.min.css";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
     // CONTENT
@@ -38,6 +39,10 @@ export default function Footer() {
                                         <li>08153969986</li>
                                         <li>manggalapustaka@gmail.com</li>
                                     </ul>
+                                    <br />
+                                    <NavLink to="/Login" className="nav-link">
+                                        Login Admin
+                                    </NavLink>
                                 </div>
 
                                 <div className="col-lg-6 col-md-6 col-xl-6  mb-5 mb-lg-0 footer-icon-social mt-2">

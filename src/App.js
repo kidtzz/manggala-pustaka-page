@@ -16,6 +16,7 @@ import Footer from "./components/layouts/Footer";
 
 //Pages
 import LandingPage from "./components/pages/LandingPage";
+import Login from "./components/Admin/Login";
 
 export default class App extends Component {
     state = {
@@ -35,6 +36,7 @@ export default class App extends Component {
                     {/* Body Contentnya Disini */}
                     <Routes className="App-bg-content">
                         <Route path="/" element={<LandingPage />} />
+                        <Route path="/Login" element={<Login />} />
                     </Routes>
                     {/* Footernya */}
                     <Footer />
