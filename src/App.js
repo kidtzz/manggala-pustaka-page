@@ -10,13 +10,10 @@ import "aos/dist/aos.css";
 import "../src/assets/scss/Button.scss";
 import "../src/assets/js/main.js";
 
-//Layouts
-import Navbar from "./components/layouts/Navbar/Navbar";
-import Footer from "./components/layouts/Footer";
-
 //Pages
 import LandingPage from "./components/pages/LandingPage";
 import Login from "./components/Admin/Login";
+import SignUp from "./components/Admin/SignUp";
 
 export default class App extends Component {
     state = {
@@ -36,6 +33,7 @@ export default class App extends Component {
                     <Routes className="App-bg-content">
                         <Route path="/" element={<LandingPage />} />
                         <Route path="/Login" element={<Login />} />
+                        <Route path="/SignUp" element={<SignUp />} />
                     </Routes>
                     {/* Footernya */}
                 </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 
 export default class Login extends React.Component {
     constructor(props) {
@@ -10,7 +11,7 @@ export default class Login extends React.Component {
     }
     componentDidMount() {
         axios
-            .get("https://server-api-manggala-pustaka.herokuapp.com/items")
+            .get("https://server-api-manggala-pustaka.herokuapp.com/members")
             .then((response) => {
                 this.setState({ items: response.data });
             });
@@ -18,14 +19,54 @@ export default class Login extends React.Component {
     render() {
         return (
             <div className="container">
-                <h1>hellow</h1>
-                <div className="col-lg-6 pb-5">
-                    {this.state.items.map((index) => (
-                        <div key={index.id}>
-                            <h1>{index.name}</h1>
-                            <p>{index.slug}</p>
+                <h2 className="text-center">
+                    Selamat Datang Di Manggala Pustaka
+                </h2>
+                <div className=" col-lg-4 card p-5 ">
+                    <form>
+                        <h3>Sign In</h3>
+                        <div className="mb-3">
+                            <label>Email address</label>
+                            <input
+                                type="email"
+                                className="form-control"
+                                placeholder="Enter email"
+                            />
                         </div>
-                    ))}
+                        <div className="mb-3">
+                            <label>Password</label>
+                            <input
+                                type="password"
+                                className="form-control"
+                                placeholder="Enter password"
+                            />
+                        </div>
+                        <div className="mb-3">
+                            <div className="custom-control custom-checkbox">
+                                <input
+                                    type="checkbox"
+                                    className="custom-control-input"
+                                    id="customCheck1"
+                                />
+                                <label
+                                    className="custom-control-label"
+                                    htmlFor="customCheck1"
+                                >
+                                    Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <div className="d-grid">
+                            <button type="submit" className="btn btn-primary">
+                                Submit
+                            </button>
+                        </div>
+                        <p className="forgot-password text-right">
+                            Forgot <a href=" ">password?</a>
+                        </p>
+
+                        <NavLink to="/SignUp">registered</NavLink>
+                    </form>
                 </div>
             </div>
         );
