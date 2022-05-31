@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../assets/css/Navbar.min.css";
-import logo from "../../../assets/img/logo1.png";
+import logo from "../../../assets/img/logo_manggala_pustaka.png";
 import { MenuItems, ListMenu } from "./MenuItems";
 
 const Navbar = () => {

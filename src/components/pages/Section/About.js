@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "../../../assets/css/About.min.css";
-import profil from "../../../assets/img/profil.jpeg";
+import profil from "../../../assets/img/tempat_manggala_pustaka.jpeg";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
