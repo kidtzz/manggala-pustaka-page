@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "../../../assets/css/Hcontent.min.css";
+import "../../../assets/scss/Hcontent.scss";
 import "../../../assets/css/animate.css/animate.min.css";
 import proposal from "../../../assets/file/proposal.pdf";
 
