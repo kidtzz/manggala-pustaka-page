@@ -38,7 +38,7 @@ const About = () => {
                             data-aos="fade-up"
                             data-aos-anchor-placement="bottom-bottom"
                         >
-                            <div className="header-kegiatan  mb-5">
+                            <div className="header-kegiatan mb-5">
                                 <h4 className="mb-3 fw-bold text-left animate__animated animate__fadeInDown">
                                     Tentang Kami
                                 </h4>

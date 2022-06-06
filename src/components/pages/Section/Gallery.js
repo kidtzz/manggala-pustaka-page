@@ -51,6 +51,7 @@ function Gallery() {
                             <div
                                 className="col-lg-4 col-md-6 portfolio-item filter-app "
                                 data-aos="flip-down"
+                                key={image}
                             >
                                 <div className="portfolio-wrap ">
                                     <SRLWrapper>

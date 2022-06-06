@@ -55,7 +55,10 @@ export const Kegiatan = () => {
                     >
                         {ListData.map((item, index) => {
                             return (
-                                <div className="card card-bg mb-3 mx-3 animate__animated animate__fadeInUp">
+                                <div
+                                    className="card card-bg mb-3 mx-3 animate__animated animate__fadeInUp"
+                                    key={index}
+                                >
                                     <img
                                         src={item.img}
                                         className="img-fluid w-100"
