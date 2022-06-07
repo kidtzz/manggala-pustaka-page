@@ -52,7 +52,7 @@ export default class Login extends React.Component {
                                 }
                             />
                         </div>
-                        {/* <div className="mb-3">
+                        <div className="mb-3">
                             <div className="custom-control custom-checkbox">
                                 <input
                                     type="checkbox"
@@ -66,15 +66,15 @@ export default class Login extends React.Component {
                                     Remember me
                                 </label>
                             </div>
-                        </div> */}
+                        </div>
                         <div className="d-grid">
                             <button className="btn btn-primary">Login</button>
                         </div>
-                        {/* <p className="forgot-password text-right">
+                        <p className="forgot-password text-right">
                             Forgot <a href=" ">password?</a>
                         </p>
 
-                        <NavLink to="/Register">registered</NavLink> */}
+                        <NavLink to="/Register">registered</NavLink>
                     </form>
                 </div>
             </div>
