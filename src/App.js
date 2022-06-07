@@ -12,8 +12,8 @@ import "../src/assets/js/main.js";
 
 //Pages
 import LandingPage from "./components/pages/LandingPage";
-import Login from "./components/Admin/Login";
-import SignUp from "./components/Admin/SignUp";
+import Login from "./components/Admin/Login/Login";
+import Register from "./components/Admin/Login/Register";
 
 export default class App extends Component {
     state = {
@@ -33,7 +33,7 @@ export default class App extends Component {
                     <Routes className="App-bg-content">
                         <Route path="/" element={<LandingPage />} />
                         <Route path="/Login" element={<Login />} />
-                        <Route path="/SignUp" element={<SignUp />} />
+                        <Route path="/Register" element={<Register />} />
                     </Routes>
                     {/* Footernya */}
                 </div>
