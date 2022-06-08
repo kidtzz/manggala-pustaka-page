@@ -37,8 +37,16 @@ const Visi = () => {
                             <ul type="1">
                                 <li>Menyediakan buku-buku bermutu</li>
                                 <li>
-                                    Mengkondisikan membaca buku menjadi kegiatan
-                                    yang menyenangkan dan bermanfaat
+                                    Sebagai wadah dari ide-ide kreatif dari
+                                    masyarakat
+                                </li>
+                                <li>
+                                    Merealisasikan ide-ide kreatif dari
+                                    masyarakat
+                                </li>
+                                <li>
+                                    Menjadikan masyarakat yang berkualitas, dari
+                                    segi pendidikan, budaya dan ekonomi
                                 </li>
                                 <li>
                                     Menjadi forum silaturahmi yang menjembatani
