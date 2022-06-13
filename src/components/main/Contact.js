@@ -29,7 +29,7 @@ export class ExampleApp extends React.Component {
         return (
             <div>
                 <StatusAlert />
-
+                
                 <button
                     className="btn button2 m-1"
                     type="submit"

@@ -71,9 +71,9 @@ export default class Register extends React.Component {
                                     />
                                 </div>
                                 <div className="mb-3">
-                                    <label>Tempat Tanggal lahir</label>
+                                    <label> Tanggal lahir</label>
                                     <input
-                                        type="tempat_lahir"
+                                        type="date"
                                         className="form-control"
                                         placeholder="Enter..."
                                         onChange={(event) =>
