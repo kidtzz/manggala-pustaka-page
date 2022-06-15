@@ -1,86 +1,66 @@
-import React from "react";
-import axios from "axios";
-import { NavLink } from "react-router-dom";
+// import React from "react";
+// import { NavLink } from "react-router-dom";
+// import { firebaseAuthentication } from "../../Config/Firebase";
 
-export default class Login extends React.Component {
-    handleSubmit = (event) => {
-        event.preventDefault();
+// export default class Login extends React.Component {
+//     render() {
+//         return (
+//             <div className="container">
+//                 <h2 className="text-center">
+//                     Selamat Datang Di Manggala Pustaka
+//                 </h2>
+//                 <div className=" col-lg-4 card p-5 ">
+//                     <form onSubmit={this.handleSubmit}>
+//                         <h3>Sign In</h3>
+//                         <div className="mb-3">
+//                             <label>Email address</label>
+//                             <input
+//                                 type="email"
+//                                 className="form-control"
+//                                 placeholder="Enter email"
+//                                 onChange={(e) => (this.email = e.target.value)}
+//                             />
+//                         </div>
+//                         <div className="mb-3">
+//                             <label>Password</label>
+//                             <input
+//                                 type="password"
+//                                 className="form-control"
+//                                 placeholder="Enter password"
+//                                 onChange={(e) =>
+//                                     (this.password = e.target.value)
+//                                 }
+//                             />
+//                         </div>
+//                         <div className="mb-3">
+//                             <div className="custom-control custom-checkbox">
+//                                 <input
+//                                     type="checkbox"
+//                                     className="custom-control-input"
+//                                     id="customCheck1"
+//                                 />
+//                                 <label
+//                                     className="custom-control-label"
+//                                     htmlFor="customCheck1"
+//                                 >
+//                                     Remember me
+//                                 </label>
+//                             </div>
+//                         </div>
+//                         <div className="d-grid">
+//                             <button className="btn btn-primary">Login</button>
+//                         </div>
+//                         <p className="forgot-password text-right">
+//                             Forgot <a href=" ">password?</a>
+//                         </p>
 
-        const userData = {
-            email: this.email,
-            password: this.password,
-        };
-
-        axios
-            .post(
-                "https://server-api-manggala-pustaka.herokuapp.com/members",
-                userData
-            )
-            .then((ress) => {
-                console.log(ress);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    };
-    render() {
-        return (
-            <div className="container">
-                <h2 className="text-center">
-                    Selamat Datang Di Manggala Pustaka
-                </h2>
-                <div className=" col-lg-4 card p-5 ">
-                    <form onSubmit={this.handleSubmit}>
-                        <h3>Sign In</h3>
-                        <div className="mb-3">
-                            <label>Email address</label>
-                            <input
-                                type="email"
-                                className="form-control"
-                                placeholder="Enter email"
-                                onChange={(e) => (this.email = e.target.value)}
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <label>Password</label>
-                            <input
-                                type="password"
-                                className="form-control"
-                                placeholder="Enter password"
-                                onChange={(e) =>
-                                    (this.password = e.target.value)
-                                }
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <div className="custom-control custom-checkbox">
-                                <input
-                                    type="checkbox"
-                                    className="custom-control-input"
-                                    id="customCheck1"
-                                />
-                                <label
-                                    className="custom-control-label"
-                                    htmlFor="customCheck1"
-                                >
-                                    Remember me
-                                </label>
-                            </div>
-                        </div>
-                        <div className="d-grid">
-                            <button className="btn btn-primary">Login</button>
-                        </div>
-                        <p className="forgot-password text-right">
-                            Forgot <a href=" ">password?</a>
-                        </p>
-
-                        <NavLink to="/Register">registered</NavLink>
-                    </form>
-                </div>
-            </div>
-        );
-    }
-}
+//                         <NavLink to="/Register">registered</NavLink>
+//                     </form>
+//                 </div>
+//             </div>
+//         );
+//     }
+// }
 
 // import React, { useEffect } from "react";
 // // import { useHistory } from "react-router-dom";
@@ -138,3 +118,66 @@ export default class Login extends React.Component {
 //         </div>
 //     );
 // }
+
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import {
+    auth,
+    logInWithEmailAndPassword,
+    signInWithGoogle,
+} from "../../Config/Firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+
+function Login() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [user, loading, error] = useAuthState(auth);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (loading) {
+            // maybe trigger a loading screen
+            return;
+        }
+        if (user) navigate("/Dashboard");
+    }, [user, loading]);
+
+    return (
+        <div className="login">
+            <div className="container">
+                <input
+                    type="text"
+                    className="form-control"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="E-mail Address"
+                />
+                <input
+                    type="password"
+                    className="form-control"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Password"
+                />
+                <button
+                    className="btn btn-primary"
+                    onClick={() => logInWithEmailAndPassword(email, password)}
+                >
+                    Login
+                </button>
+                <button className="btn btn-danger" onClick={signInWithGoogle}>
+                    Login with Google
+                </button>
+                <div>
+                    <Link to="/reset">Forgot Password</Link>
+                </div>
+                <div>
+                    Don't have an account? <Link to="/Register">Register</Link>
+                    now.
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default Login;

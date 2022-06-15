@@ -15,6 +15,8 @@ import "../src/assets/js/main.js";
 import LandingPage from "./components/pages/LandingPage";
 import Login from "./components/Admin/Login/Login";
 import Register from "./components/Admin/Login/Register";
+import Dashboard from "./components/Admin/Dashboard/Dashboard";
+import Reset from "./components/Admin/Login/Reset";
 
 export default class App extends Component {
     state = {
@@ -35,6 +37,8 @@ export default class App extends Component {
                         <Route path="/" element={<LandingPage />} />
                         <Route path="/Login" element={<Login />} />
                         <Route path="/Register" element={<Register />} />
+                        <Route path="/Dashboard" element={<Dashboard />} />
+                        <Route path="/Reset" element={<Reset />} />
                     </Routes>
                     {/* Footernya */}
                 </div>
