@@ -1,6 +1,6 @@
 import "./App.scss";
 import React, { Component } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 //Assetsnya
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -29,20 +29,24 @@ export default class App extends Component {
 
     render() {
         return (
-            <BrowserRouter>
+            <Router>
                 <div className="App ">
                     {/* Headernya */}
                     {/* Body Contentnya Disini */}
                     <Routes className="App-bg-content">
-                        <Route path="/" element={<LandingPage />} />
-                        <Route path="/Login" element={<Login />} />
-                        <Route path="/Register" element={<Register />} />
-                        <Route path="/Dashboard" element={<Dashboard />} />
-                        <Route path="/Reset" element={<Reset />} />
+                        <Route exact path="/" element={<LandingPage />} />
+                        <Route exact path="/Login" element={<Login />} />
+                        <Route exact path="/Register" element={<Register />} />
+                        <Route
+                            exact
+                            path="/Dashboard"
+                            element={<Dashboard />}
+                        />
+                        <Route exact path="/Reset" element={<Reset />} />
                     </Routes>
                     {/* Footernya */}
                 </div>
-            </BrowserRouter>
+            </Router>
         );
     }
 }
