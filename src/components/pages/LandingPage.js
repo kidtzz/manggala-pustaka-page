@@ -5,12 +5,12 @@ import React from "react";
 import Hcontent from "./Section/Hcontent";
 import About from "./Section/About";
 import Visi from "./Section/Visi";
-import { Kegiatan, Kegiatan2 } from "./Section/Kegiatan";
+import Kegiatan from "./Section/Kegiatan";
 import Gallery from "./Section/Gallery";
 
 //Layouts
 import Navbar from "../layouts/Navbar/Navbar";
-import Footer from "../layouts/Footer";
+import Footer from "../layouts/Footer/Footer";
 
 export default class LandingPage extends React.Component {
     render() {
@@ -22,7 +22,6 @@ export default class LandingPage extends React.Component {
                 <About />
                 <Visi />
                 <Kegiatan />
-                <Kegiatan2 />
                 <Gallery />
                 <Footer />
             </div>

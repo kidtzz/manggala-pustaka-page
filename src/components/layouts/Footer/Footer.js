@@ -1,6 +1,6 @@
 import React from "react";
-import Contact from "../main/Contact";
-import "../../assets/css/Footer.min.css";
+import Contact from "./Contact";
+import "../../../assets/css/Footer.min.css";
 import { NavLink } from "react-router-dom";
 
 export default function Footer() {

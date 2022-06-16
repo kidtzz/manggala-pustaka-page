@@ -1,13 +1,29 @@
-import React from "react";
-import "../../../assets/css/Kegiatan.min.css";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import ListData from "../../Data/DataKegiatan";
+import "../../../assets/css/Kegiatan.min.css";
 import imgkesehatan from "../../../assets/img/galery/2.jpg";
 import imgpertanian from "../../../assets/img/galery/5.jpg";
 
-// satu
-export const Kegiatan = () => {
+const URL = "https://server-api-manggala-pustaka.herokuapp.com/activity";
+
+const Kegiatan = () => {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const { data: response } = await axios.get(URL);
+                setData(response);
+            } catch (error) {
+                console.error(error.message);
+            }
+        };
+
+        fetchData();
+    }, []);
+
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
@@ -26,51 +42,100 @@ export const Kegiatan = () => {
         },
     };
     return (
-        <section className="kegiatan  " id="kegiatan">
-            <div className="jumbotron ">
-                <div
-                    className="container pt-4 pb-3 "
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                >
-                    <div className="header-kegiatan text-center mb-5">
-                        <h4 className="text-dark  mb-4 fw-bold text-center animate__animated animate__fadeInDown">
-                            Kegiatan Penddikan
-                        </h4>
-                        <span className="section-separator"></span>
-                    </div>
-                    <Carousel
-                        swipeable={false}
-                        draggable={false}
-                        responsive={responsive}
-                        ssr={true} // means to render carousel on server-side.
-                        infinite={true}
-                        autoPlaySpeed={1000}
-                        keyBoardControl={true}
-                        customTransition="all .5"
-                        transitionDuration={500}
-                        containerClass="carousel-container"
-                        dotListClass="custom-dot-list-style"
-                        itemClass="carousel-item-padding-40-px"
+        <div>
+            <section className="kegiatan  " id="kegiatan">
+                <div className="jumbotron ">
+                    <div
+                        className="container pt-4 pb-3 "
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="bottom-bottom"
                     >
-                        {ListData.map((item, index) => {
-                            return (
-                                <div
-                                    className="card card-bg mb-3 mx-3 animate__animated animate__fadeInUp"
-                                    key={index}
-                                >
+                        <div className="header-kegiatan text-center mb-5">
+                            <h4 className="text-dark  mb-4 fw-bold text-center animate__animated animate__fadeInDown">
+                                Kegiatan Penddikan
+                            </h4>
+                            <span className="section-separator"></span>
+                        </div>
+                        <Carousel
+                            swipeable={false}
+                            draggable={false}
+                            responsive={responsive}
+                            ssr={true} // means to render carousel on server-side.
+                            infinite={true}
+                            autoPlaySpeed={1000}
+                            keyBoardControl={true}
+                            customTransition="all .5"
+                            transitionDuration={500}
+                            containerClass="carousel-container"
+                            dotListClass="custom-dot-list-style"
+                            itemClass="carousel-item-padding-40-px"
+                        >
+                            {data.map((item, index) => {
+                                return (
+                                    <div
+                                        className="card card-bg mb-3 mx-3 animate__animated animate__fadeInUp"
+                                        key={index}
+                                    >
+                                        <img
+                                            src={item.imgURL}
+                                            className="img-fluid w-100"
+                                            alt="..."
+                                        ></img>
+                                        <div className="card-body">
+                                            <h5 className="card-title fw-bold ">
+                                                {item.title}
+                                            </h5>
+                                            <p className="card-text">
+                                                {item.bodytext}
+                                            </p>
+                                            <br />
+                                            <a
+                                                href="https://www.instagram.com/manggalapustaka/"
+                                                className="btn button2"
+                                            >
+                                                Selanjutnya
+                                            </a>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </Carousel>
+                    </div>
+                </div>
+            </section>
+            {/* kegiatan 2 */}
+            <section className="kegiatan" id="kegiatan">
+                <div className="jumbotron ">
+                    <div
+                        className="container pt-4 pb-3 "
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="bottom-bottom"
+                    >
+                        <div className="header-kegiatan text-center mb-5 animate__animated animate__fadeInDown">
+                            <h4 className="text-dark  mb-4 fw-bold text-center">
+                                Kegiatan Masyarakat
+                            </h4>
+                            <span className="section-separator"></span>
+                        </div>
+                        <div className="carousel-inner carousel-inner2 justify-content-center animate__animated animate__fadeInUp">
+                            <div className="carousel-item active carousel-item2">
+                                <div className="card">
                                     <img
-                                        src={item.img}
-                                        className="img-fluid w-100"
+                                        src={imgkesehatan}
+                                        className="d-block w-100"
                                         alt="..."
                                     ></img>
                                     <div className="card-body">
-                                        <h5 className="card-title fw-bold ">
-                                            {item.title}
+                                        <h5 className="card-title fw-bold">
+                                            Pengecekan Kesehatan Masyarakat
                                         </h5>
                                         <p className="card-text">
-                                            {item.bodytext}
+                                            Layanan kesehatan ini dilaksanakan
+                                            seminggu sekali, dengan tujuan agar
+                                            lingkungan masyarakat yang sehat dan
+                                            aman dari penyakit
                                         </p>
+                                        <br />
                                         <br />
                                         <a
                                             href="https://www.instagram.com/manggalapustaka/"
@@ -80,96 +145,42 @@ export const Kegiatan = () => {
                                         </a>
                                     </div>
                                 </div>
-                            );
-                        })}
-                    </Carousel>
-                </div>
-            </div>
-        </section>
-    );
-};
-
-//
-//
-//
-//
-
-// Kedua
-export const Kegiatan2 = () => {
-    return (
-        <section className="kegiatan" id="kegiatan">
-            <div className="jumbotron ">
-                <div
-                    className="container pt-4 pb-3 "
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="bottom-bottom"
-                >
-                    <div className="header-kegiatan text-center mb-5 animate__animated animate__fadeInDown">
-                        <h4 className="text-dark  mb-4 fw-bold text-center">
-                            Kegiatan Masyarakat
-                        </h4>
-                        <span className="section-separator"></span>
-                    </div>
-                    <div className="carousel-inner carousel-inner2 justify-content-center animate__animated animate__fadeInUp">
-                        <div className="carousel-item active carousel-item2">
-                            <div className="card">
-                                <img
-                                    src={imgkesehatan}
-                                    className="d-block w-100"
-                                    alt="..."
-                                ></img>
-                                <div className="card-body">
-                                    <h5 className="card-title fw-bold">
-                                        Pengecekan Kesehatan Masyarakat
-                                    </h5>
-                                    <p className="card-text">
-                                        Layanan kesehatan ini dilaksanakan
-                                        seminggu sekali, dengan tujuan agar
-                                        lingkungan masyarakat yang sehat dan
-                                        aman dari penyakit
-                                    </p>
-                                    <br />
-                                    <br />
-                                    <a
-                                        href="https://www.instagram.com/manggalapustaka/"
-                                        className="btn button2"
-                                    >
-                                        Selanjutnya
-                                    </a>
-                                </div>
                             </div>
-                        </div>
-                        <div className="carousel-item carousel-item2">
-                            <div className="card">
-                                <img
-                                    src={imgpertanian}
-                                    className="d-block w-100"
-                                    alt="..."
-                                ></img>
-                                <div className="card-body">
-                                    <h5 className="card-title fw-bold">
-                                        Diskusi Pertanian
-                                    </h5>
-                                    <p className="card-text">
-                                        program ini bertujuan untuk meningkatkan
-                                        perekonomian masyarakat dengan
-                                        mempelajari hal baru tentang efisiensi,
-                                        efektifitas dan ekonomis seputar
-                                        pertanian serta memperdayakan masyarakat
-                                        agar lebih maju
-                                    </p>
-                                    <a
-                                        href="https://www.instagram.com/manggalapustaka/"
-                                        className="btn button2"
-                                    >
-                                        Selanjutnya
-                                    </a>
+                            <div className="carousel-item carousel-item2">
+                                <div className="card">
+                                    <img
+                                        src={imgpertanian}
+                                        className="d-block w-100"
+                                        alt="..."
+                                    ></img>
+                                    <div className="card-body">
+                                        <h5 className="card-title fw-bold">
+                                            Diskusi Pertanian
+                                        </h5>
+                                        <p className="card-text">
+                                            program ini bertujuan untuk
+                                            meningkatkan perekonomian masyarakat
+                                            dengan mempelajari hal baru tentang
+                                            efisiensi, efektifitas dan ekonomis
+                                            seputar pertanian serta
+                                            memperdayakan masyarakat agar lebih
+                                            maju
+                                        </p>
+                                        <a
+                                            href="https://www.instagram.com/manggalapustaka/"
+                                            className="btn button2"
+                                        >
+                                            Selanjutnya
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     );
 };
+
+export default Kegiatan;
