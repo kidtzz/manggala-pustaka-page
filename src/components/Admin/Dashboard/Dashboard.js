@@ -108,7 +108,7 @@ function Dashboard() {
 
                         <div className="mb-5">
                             <h3 className="h6 mb-3">
-                                Subscribe for newsletter
+                                Subscribe newsletter
                             </h3>
                             <form action=" " className="subscribe-form">
                                 <div className="form-group d-flex">
