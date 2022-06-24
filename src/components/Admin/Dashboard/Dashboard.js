@@ -92,12 +92,7 @@ function Dashboard() {
                                     Gallery
                                 </a>
                             </li>
-                            <li>
-                                <a href=" ">
-                                    <span className="fa fa-cogs mr-3"></span>
-                                    Services
-                                </a>
-                            </li>
+
                             <li>
                                 <a href=" ">
                                     <span className="fa fa-paper-plane mr-3"></span>
@@ -107,9 +102,7 @@ function Dashboard() {
                         </ul>
 
                         <div className="mb-5">
-                            <h3 className="h6 mb-3">
-                                Subscribe newsletter
-                            </h3>
+                            <h3 className="h6 mb-3">Subscribe newsletter</h3>
                             <form action=" " className="subscribe-form">
                                 <div className="form-group d-flex">
                                     <div className="icon">
