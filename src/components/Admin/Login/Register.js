@@ -11,13 +11,14 @@ import "../../../assets/scss/css/Register.min.css";
 function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [name, setName] = useState("");
+    const [first_name, setFirst_Name] = useState("");
+    const [last_name, setLast_Name] = useState("");
     const [user, loading] = useAuthState(auth);
     const navigate = useNavigate();
 
     const register = () => {
-        if (!name) alert("Please enter name");
-        registerWithEmailAndPassword(name, email, password);
+        if (!first_name) alert("Please enter first_name");
+        registerWithEmailAndPassword(first_name, last_name, email, password);
     };
 
     useEffect(() => {
@@ -30,7 +31,7 @@ function Register() {
             <div className="container">
                 <div className="card mx-auto col-lg-4 m-3 px-5 py-5 ">
                     <h2 className="text-center ">Registrasi</h2>
-                    <label>Nama</label>
+                    <label>First Nama</label>
                     <div className=" input-group mb-3">
                         <div className="input-group-addon p-2">
                             <i className="bi bi-person"></i>
@@ -38,9 +39,22 @@ function Register() {
                         <input
                             type="text"
                             className="form-control"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
+                            value={first_name}
+                            onChange={(e) => setFirst_Name(e.target.value)}
                             placeholder="Full Name"
+                        />
+                    </div>
+                    <label>Last Name</label>
+                    <div className=" input-group mb-3">
+                        <div className="input-group-addon p-2">
+                            <i className="bi bi-person"></i>
+                        </div>
+                        <input
+                            type="text"
+                            className="form-control"
+                            value={last_name}
+                            onChange={(e) => setLast_Name(e.target.value)}
+                            placeholder="Last Name"
                         />
                     </div>
                     <label>Email</label>

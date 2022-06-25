@@ -7,7 +7,7 @@ import "../../../assets/scss/Admin/Dashboard.scss";
 
 function Dashboard() {
     const [user, loading] = useAuthState(auth);
-    const [name, setName] = useState("");
+    const [first_name, setFirst_Name] = useState("");
     const navigate = useNavigate();
 
     const fetchUserName = async () => {
@@ -19,7 +19,7 @@ function Dashboard() {
             const doc = await getDocs(q);
             const data = doc.docs[0].data();
 
-            setName(data.name);
+            setFirst_Name(data.first_name);
         } catch (err) {
             console.error(err);
             alert("An error occured while fetching user data");
@@ -37,7 +37,7 @@ function Dashboard() {
         <div className="dashboard-content">
             <div className="container">
                 Logged in as
-                <div>{name}</div>
+                <div>{first_name}</div>
                 <div>{user?.email}</div>
                 <button className="btn btn-primary" onClick={logout}>
                     Logout
