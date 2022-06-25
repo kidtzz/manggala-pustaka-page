@@ -35,14 +35,6 @@ function Dashboard() {
 
     return (
         <div className="dashboard-content">
-            <div className="container">
-                Logged in as
-                <div>{first_name}</div>
-                <div>{user?.email}</div>
-                <button className="btn btn-primary" onClick={logout}>
-                    Logout
-                </button>
-            </div>
             <div className="wrapper d-flex align-items-stretch">
                 <nav id="sidebar">
                     <div className="custom-menu">
@@ -53,6 +45,13 @@ function Dashboard() {
                         >
                             <i className="fa fa-bars"></i>
                             <span className="sr-only">Toggle Menu</span>
+                        </button>
+                    </div>
+                    <div className="container">
+                        <div>{first_name}</div>
+                        <div>{user?.email}</div>
+                        <button className="btn btn-primary" onClick={logout}>
+                            Logout
                         </button>
                     </div>
                     <div className="p-4">
