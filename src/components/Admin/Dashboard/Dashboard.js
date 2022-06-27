@@ -75,12 +75,6 @@ function Dashboard() {
                             </li>
                             <li>
                                 <a href=" ">
-                                    <span className="fa fa-briefcase mr-3"></span>
-                                    Works
-                                </a>
-                            </li>
-                            <li>
-                                <a href=" ">
                                     <span className="fa fa-sticky-note mr-3"></span>
                                     Blog
                                 </a>
