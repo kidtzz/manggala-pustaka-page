@@ -44,7 +44,7 @@ function Dashboard() {
                             className="btn btn-primary"
                         >
                             <i className="fa fa-bars"></i>
-                            <span className="sr-only">Toggle Menus</span>
+                            <span className="sr-only">Toggle Menuss</span>
                         </button>
                     </div>
                     <div className="container">
