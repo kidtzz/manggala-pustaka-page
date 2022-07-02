@@ -52,6 +52,13 @@ function Dashboard() {
     //     getPoke();
     // }, []);
 
+    // const menu = [
+    //     { sideMenu: "Home" },
+    //     { sideMenu: "About" },
+    //     { sideMenu: "Blog" },
+    //     { sideMenu: "Gallery" },
+    // ];
+
     useEffect(() => {
         const fetchMenu = async () => {
             try {
@@ -67,12 +74,6 @@ function Dashboard() {
         fetchMenu();
     }, []);
 
-    // const menu = [
-    //     { sideMenu: "Home" },
-    //     { sideMenu: "About" },
-    //     { sideMenu: "Blog" },
-    //     { sideMenu: "Gallery" },
-    // ];
     return (
         <div className="dashboard-content">
             <div className="container"></div>
