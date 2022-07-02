@@ -1,8 +1,8 @@
-$font-primary: "Poppins", Arial, sans-serif;
-$primary: #3445b4;
-$secondary: #44bef1;
-$black: #000;
-$white: #999;
+// $font-primary: "Poppins", Arial, sans-serif;
+$primary: #f1f1f1;
+$secondary: #2e80a3;
+$black: rgb(199, 8, 8);
+$white: rgb(10, 10, 10);
 
 .dashboard-content {
     a {
@@ -36,7 +36,6 @@ $white: #999;
     .h5 {
         line-height: 1.5;
         font-weight: 400;
-        font-family: $font-primary;
         color: $black;
     }
 
@@ -112,6 +111,7 @@ $white: #999;
                 a {
                     padding: 10px 0;
                     display: block;
+                    font-weight: 500;
                     color: rgba(255, 255, 255, 0.6);
                     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
                     span {
