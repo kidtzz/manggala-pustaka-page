@@ -30,7 +30,7 @@ function Register() {
         <div className="register-content">
             <div className="container">
                 <div className="card mx-auto col-lg-4 m-3 px-5 py-5 ">
-                    <h2 className="text-center ">Registrasi</h2>
+                    <h2 className="text-center ">Registrasi Account</h2>
                     <label>First Nama</label>
                     <div className=" input-group mb-3">
                         <div className="input-group-addon p-2">
