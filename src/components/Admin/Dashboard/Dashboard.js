@@ -15,13 +15,15 @@ function Dashboard() {
 
     const fetchUserName = async () => {
         try {
+            ///QUERY buat manggil databse di Firebase
             const q = query(
                 collection(db, "users"),
                 where("uid", "==", user?.uid)
             );
+            //Data yang dipanggil berdasarkan Array
             const doc = await getDocs(q);
             const data = doc.docs[0].data();
-
+            //ini state berdasarkan UseStatenya
             setFirst_Name(data.first_name);
         } catch (err) {
             console.error(err);
