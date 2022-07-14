@@ -58,7 +58,7 @@ const logInWithEmailAndPassword = async (email, password) => {
         await signInWithEmailAndPassword(auth, email, password);
     } catch (err) {
         console.error(err);
-        alert("Username or Password Salah");
+        // alert("Username or Password Salah");
     }
 };
 

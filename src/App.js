@@ -8,7 +8,6 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "aos";
 import "aos/dist/aos.css";
 import "../src/assets/scss/Button.scss";
-import "../src/assets/js/main.js";
 import "./assets/scss/css/Utilities.min.css";
 
 //Pages

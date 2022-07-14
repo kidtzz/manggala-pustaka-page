@@ -92,7 +92,7 @@ export default function Footer() {
                                 />
                                 <div className="mb-3">
                                     <label
-                                        for="fullname"
+                                        htmlFor="fullname"
                                         className="form-label "
                                     >
                                         Full Name
@@ -107,7 +107,7 @@ export default function Footer() {
                                 </div>
                                 <div className="mb-3">
                                     <label
-                                        for="emailinfo"
+                                        htmlFor="emailinfo"
                                         className="form-label "
                                     >
                                         Email address
@@ -122,7 +122,10 @@ export default function Footer() {
                                     ></input>
                                 </div>
                                 <div className="mb-3">
-                                    <label for="massage" className="form-label">
+                                    <label
+                                        htmlFor="massage"
+                                        className="form-label"
+                                    >
                                         Massage
                                     </label>
                                     <textarea
