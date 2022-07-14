@@ -108,7 +108,7 @@ function Dashboard() {
                 </nav>
 
                 <div id="content" className="p-4 p-md-5 pt-5">
-                    <h2 className="mb-4">Sidebar Dashbard</h2>
+                    <h2 className="mb-4">Sidebar new</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit, sed do eiusmod tempor incididunt ut labore et
