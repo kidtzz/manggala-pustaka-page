@@ -32,6 +32,7 @@ export default class App extends Component {
                 <div className="App ">
                     {/* Headernya */}
                     {/* Body Contentnya Disini */}
+
                     <Routes className="App-bg-content">
                         <Route exact path="/" element={<LandingPage />} />
                         <Route exact path="/Login" element={<Login />} />
@@ -43,6 +44,7 @@ export default class App extends Component {
                         />
                         <Route exact path="/Reset" element={<Reset />} />
                     </Routes>
+
                     {/* Footernya */}
                 </div>
             </Router>
